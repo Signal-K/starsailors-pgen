@@ -12,6 +12,10 @@
     "react-dom": "^18.0.0",
     "three": "^0.155.0"
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Signal-K/starsailors-pgen.git"
+},
   "keywords": [],
     "main": "dist/planet-generator.umd.js", 
     "module": "dist/planet-generator.es.js",
