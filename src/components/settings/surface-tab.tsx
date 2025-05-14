@@ -1,13 +1,14 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Slider } from "@/components/ui/slider"
-import { Switch } from "@/components/ui/switch"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import React from "react"
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card"
+import { Label } from "../../components/ui/label"
+import { Slider } from "../../components/ui/slider"
+import { Switch } from "../../components/ui/switch"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select"
 import { AlertCircle } from "lucide-react"
-import { type PlanetStats, determinePlanetType, isLiquidAvailable, determineLiquidType } from "@/lib/planet-physics"
-import { getParameterRange } from "@/lib/biome-data"
+import { type PlanetStats, determinePlanetType, isLiquidAvailable, determineLiquidType } from "../../../lib/planet-physics"
+import { BiomeRanges, getParameterRange } from "../../../lib/biome-data"
 
 interface SurfaceTabProps {
   planetStats: PlanetStats
@@ -30,7 +31,7 @@ export function SurfaceTab({ planetStats, setPlanetStats, selectedBiome }: Surfa
   }
 
   // Get parameter range for the current biome
-  const getRange = (parameter: keyof any): [number, number] => {
+  const getRange = (parameter: keyof BiomeRanges): [number, number] => {
     return getParameterRange(selectedBiome, parameter)
   }
 

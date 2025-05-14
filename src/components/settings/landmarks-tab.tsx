@@ -1,17 +1,17 @@
 "use client"
 
-import { useState, useMemo, useEffect } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import React, { useState, useMemo, useEffect } from "react"
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card"
+import { Label } from "../../components/ui/label"
+import { Input } from "../../components/ui/input"
+import { Button } from "../../components/ui/button"
 import { Plus, Trash2, Eye, Play, AlertCircle } from "lucide-react"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Slider } from "@/components/ui/slider"
-import type { PlanetStats, Landmark, LandmarkEvent, LandmarkStructure } from "@/lib/planet-physics"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { determinePlanetType } from "@/lib/planet-physics"
-import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select"
+import { Slider } from "../../components/ui/slider"
+import type { PlanetStats, Landmark, LandmarkEvent, LandmarkStructure } from "../../../lib/planet-physics"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs"
+import { determinePlanetType } from "../../../lib/planet-physics"
+import { Alert, AlertDescription } from "../../components/ui/alert"
 import { TerrainPreview } from "./landmarks/terrain-preview"
 import { getInfluenceTypes, getInfluenceTypeName } from "./landmarks/landmark-types"
 import { generateRandomCoordinates } from "./landmarks/landmark-utils"
@@ -118,7 +118,7 @@ export function LandmarksTab({ planetStats, setPlanetStats }: LandmarksTabProps)
     // Ensure landmarks is an array
     const currentLandmarks = Array.isArray(planetStats.landmarks) ? planetStats.landmarks : []
     const landmarks = [...currentLandmarks, landmarkToAdd]
-    setPlanetStats({ ...planetStats, landmarks })
+    setPlanetStats({ ...planetStats, landmarks: landmarks as Landmark[] })
 
     // Reset the form
     setNewLandmark({
@@ -264,7 +264,7 @@ export function LandmarksTab({ planetStats, setPlanetStats }: LandmarksTabProps)
   return (
     <div className="space-y-6">
       {showTypeWarning && (
-        <Alert variant="warning" className="bg-amber-900/20 border-amber-500/50 text-amber-300">
+        <Alert variant="default" className="bg-amber-900/20 border-amber-500/50 text-amber-300">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>
             Some landmarks are hidden because they don't match the current planet type (
@@ -636,7 +636,7 @@ export function LandmarksTab({ planetStats, setPlanetStats }: LandmarksTabProps)
               <TabsContent value="terrain" className="pt-4">
                 <div className="space-y-6">
                   {!landmarks[selectedLandmarkIndex].isActive && (
-                    <Alert variant="warning" className="bg-amber-900/20 border-amber-500/50 text-amber-300">
+                    <Alert variant="default" className="bg-amber-900/20 border-amber-500/50 text-amber-300">
                       <AlertCircle className="h-4 w-4" />
                       <AlertDescription>
                         This landmark is inactive because it's a {landmarks[selectedLandmarkIndex].category} landmark on
@@ -651,7 +651,7 @@ export function LandmarksTab({ planetStats, setPlanetStats }: LandmarksTabProps)
                     <TerrainPreview
                       landmark={landmarks[selectedLandmarkIndex]}
                       planetStats={planetStats}
-                      updateLandmark={updateLandmark}
+                      updateLandmark={updateLandmark as (field: string | number | symbol, value: any) => void}
                     />
                   </div>
 

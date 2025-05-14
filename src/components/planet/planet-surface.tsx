@@ -43,9 +43,9 @@ export const PlanetSurface = forwardRef<THREE.Mesh, PlanetSurfaceProps>(function
   const { surfaceGeometry, surfaceMaterial } = useMemo(() => {
     const geometry = new THREE.IcosahedronGeometry(planetStats.radius, 11)
     const positionAttribute = geometry.getAttribute("position")
-    const vertices = [],
-      colors = [],
-      uvs = []
+    const vertices: THREE.Vector3[] = [],
+      colors: THREE.Color[] = [],
+      uvs: number[] = []
     const textureParams = getSoilTextureParams(planetStats.soilTexture || "rough")
 
     for (let i = 0; i < positionAttribute.count; i++) {
@@ -323,4 +323,4 @@ function createGasGiantMaterial(planetStats: PlanetStats): THREE.ShaderMaterial 
 }
 
 // Import noise function from lib/noise.ts
-import { noise } from "@/lib/noise"
+import { noise } from "../../../lib/noise"

@@ -1,16 +1,16 @@
 "use client"
 
-import { useRef, useMemo, useState } from "react"
+import React, { useRef, useMemo, useState } from "react"
 import type * as THREE from "three"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Html } from "@react-three/drei"
-import type { PlanetStats, Landmark, LandmarkStructure } from "@/lib/planet-physics"
+import type { PlanetStats, Landmark, LandmarkStructure } from "../../../../lib/planet-physics"
 import { generateTerrainGeometry } from "./terrain-generators"
 import { getStructureGeometry, createStructureMaterial, createDefaultStructure } from "./structures/structure-types"
-import { Button } from "@/components/ui/button"
+import { Button } from "../../../components/ui/button"
 import { Plus, Trash2 } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Input } from "../../../components/ui/input"
+import { Label } from "../../../components/ui/label"
 
 interface TerrainPreviewProps {
   landmark: Landmark
@@ -192,9 +192,9 @@ export function TerrainPreview({ landmark, planetStats, updateLandmark }: Terrai
   }, [landmark.structures])
 
   // Handle terrain click to show surface scan
-  const handleTerrainClick = (event: THREE.Event) => {
-    event.stopPropagation()
-    const point = event.point
+  const handleTerrainClick = (event: React.MouseEvent) => {
+      event.stopPropagation()
+      const point = (event as any).point
     const normalizedPoint = point.clone().normalize()
 
     setSelectedPoint({
@@ -242,7 +242,13 @@ export function TerrainPreview({ landmark, planetStats, updateLandmark }: Terrai
     if (field === "position" || field === "rotation" || field === "scale") {
       updatedStructures[structureIndex] = {
         ...updatedStructures[structureIndex],
-        [field]: { ...updatedStructures[structureIndex][field as keyof LandmarkStructure], ...value },
+        [field]: typeof updatedStructures[structureIndex][field as keyof LandmarkStructure] === "object" && updatedStructures[structureIndex][field as keyof LandmarkStructure] !== null
+          ? typeof updatedStructures[structureIndex][field as keyof LandmarkStructure] === "object" && updatedStructures[structureIndex][field as keyof LandmarkStructure] !== null
+            ? (typeof updatedStructures[structureIndex][field as keyof LandmarkStructure] === "object" && updatedStructures[structureIndex][field as keyof LandmarkStructure] !== null
+                // ? { ...updatedStructures[structureIndex][field as keyof LandmarkStructure], ...value }
+            )// : value)
+            : value
+          : value,
       }
     } else {
       updatedStructures[structureIndex] = {

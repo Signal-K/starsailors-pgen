@@ -72,6 +72,7 @@ export interface LandmarkStructure {
 }
 
 export interface PlanetStats {
+  type: string
   mass: number
   radius: number
   density?: number
@@ -128,6 +129,7 @@ export const defaultPlanetStats: PlanetStats = {
   waterHeight: 0.65,
   liquidEnabled: true,
   landmarks: [],
+  type: ""
 }
 
 export function calculateDensity(mass: number, radius: number): number {

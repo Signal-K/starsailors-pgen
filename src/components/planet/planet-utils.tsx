@@ -1,8 +1,8 @@
 "use client"
 
 import * as THREE from "three"
-import { noise } from "@/lib/noise"
-import { calculateLandmarkTerrainInfluence } from "@/lib/planet-physics"
+import { noise } from "../../../lib/noise"
+import { calculateLandmarkTerrainInfluence } from "../../../lib/planet-physics"
 
 // Generate height map for planet surface
 export function generateHeightMap(planetStats: any, planetType: string) {

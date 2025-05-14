@@ -1,8 +1,8 @@
 "use client"
 
 import * as THREE from "three"
-import type { Landmark } from "@/lib/planet-physics"
-import { noise } from "@/lib/noise"
+import type { Landmark } from "../../../../lib/planet-physics"
+import { noise } from "../../../../lib/noise"
 
 // Generate random coordinates for a landmark
 export function generateRandomCoordinates(): { x: number; y: number; z: number } {

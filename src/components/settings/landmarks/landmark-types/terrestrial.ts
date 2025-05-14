@@ -1,8 +1,8 @@
 "use client"
 
 import * as THREE from "three"
-import type { PlanetStats, Landmark } from "@/lib/planet-physics"
-import { noise } from "@/lib/noise"
+import type { PlanetStats, Landmark } from "../../../../../lib/planet-physics"
+import { noise } from "../../../../../lib/noise"
 
 // List of all terrestrial landmark types
 export const terrestrialTypes = [

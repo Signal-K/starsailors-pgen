@@ -1,12 +1,12 @@
 "use client"
 
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
+import React, { useState } from "react"
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card"
+import { Label } from "../../components/ui/label"
+import { Textarea } from "../../components/ui/textarea"
+import { Button } from "../../components/ui/button"
 import { Download, Upload, Copy } from "lucide-react"
-import { type PlanetStats, mergeWithDefaults } from "@/lib/planet-physics"
+import { type PlanetStats, mergeWithDefaults } from "../../../lib/planet-physics"
 
 interface ImportExportTabProps {
   planetStats: PlanetStats

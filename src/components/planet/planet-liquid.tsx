@@ -1,9 +1,9 @@
 "use client"
 
-import { forwardRef, useMemo } from "react"
+import React, { forwardRef, useMemo } from "react"
 import * as THREE from "three"
-import { type PlanetStats, isLiquidAvailable, determineLiquidType } from "@/lib/planet-physics"
-import { noise } from "@/lib/noise"
+import { type PlanetStats, isLiquidAvailable, determineLiquidType } from "../../../lib/planet-physics"
+import { noise } from "../../../lib/noise"
 
 interface PlanetLiquidProps {
   planetStats: PlanetStats
