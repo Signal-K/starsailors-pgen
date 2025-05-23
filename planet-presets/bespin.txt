@@ -1,0 +1,63 @@
+mass: 15.00
+radius: 3.50
+density: 0.35
+temperature: 320.00
+surfaceRoughness: 0.30
+terrainErosion: 0.10
+waterLevel: 0.00
+biomassLevel: 0.00
+plateTectonics: 0.00
+soilType: gaseous
+soilTexture: smooth
+atmosphereStrength: 1.00
+liquidType: none
+salinity: 0.00
+precipitationCompound: none
+biome: Gas Giant
+mountainHeight: 0.20
+hasRings: false
+cloudCount: 80.00
+volcanicActivity: 0.00
+waterHeight: 0.00
+liquidEnabled: false
+customColors: {
+  "oceanFloor": "#FF7F50",
+  "beach": "#FFA07A",
+  "regular": "#FFD700",
+  "mountain": "#FAFAD2"
+}
+landmarks: [
+  {
+    "classification_id": "LM-801",
+    "type": "Storm System",
+    "visual_effect": "Turbulence",
+    "image_link": "",
+    "coordinates": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    },
+    "influence_type": "storm",
+    "influence_radius": 0.9,
+    "influence_strength": 0.8,
+    "influence_roughness": 0.4,
+    "category": "gaseous"
+  },
+  {
+    "classification_id": "LM-802",
+    "type": "Cloud City",
+    "visual_effect": "Light Emission",
+    "image_link": "",
+    "coordinates": {
+      "x": -0.3,
+      "y": 0.6,
+      "z": 0.4
+    },
+    "influence_type": "spot",
+    "influence_radius": 0.3,
+    "influence_strength": 0.5,
+    "influence_roughness": 0.2,
+    "category": "gaseous"
+  }
+]
+type: Gas Giant

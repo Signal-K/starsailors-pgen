@@ -1,0 +1,63 @@
+mass: 1.00
+radius: 1.00
+density: 5.51
+temperature: 288.00
+surfaceRoughness: 0.65
+terrainErosion: 0.40
+waterLevel: 0.65
+biomassLevel: 0.70
+plateTectonics: 0.80
+soilType: organic
+soilTexture: layered
+atmosphereStrength: 0.80
+liquidType: water
+salinity: 0.35
+precipitationCompound: water
+biome: Temperate Forest
+mountainHeight: 0.70
+hasRings: false
+cloudCount: 40.00
+volcanicActivity: 0.30
+waterHeight: 0.65
+liquidEnabled: true
+customColors: {
+  "oceanFloor": "#0A3B5B",
+  "beach": "#D8C596",
+  "regular": "#4D7F3A",
+  "mountain": "#8B7355"
+}
+landmarks: [
+  {
+    "classification_id": "LM-101",
+    "type": "Mountain Range",
+    "visual_effect": "None",
+    "image_link": "",
+    "coordinates": {
+      "x": 0.5,
+      "y": 0.8,
+      "z": 0.3
+    },
+    "influence_type": "mountain",
+    "influence_radius": 0.5,
+    "influence_strength": 0.7,
+    "influence_roughness": 0.5,
+    "category": "terrestrial"
+  },
+  {
+    "classification_id": "LM-102",
+    "type": "Ocean Basin",
+    "visual_effect": "None",
+    "image_link": "",
+    "coordinates": {
+      "x": -0.3,
+      "y": -0.2,
+      "z": 0.7
+    },
+    "influence_type": "basin",
+    "influence_radius": 0.6,
+    "influence_strength": 0.5,
+    "influence_roughness": 0.2,
+    "category": "terrestrial"
+  }
+]
+type: Terrestrial

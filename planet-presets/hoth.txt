@@ -1,0 +1,63 @@
+mass: 0.85
+radius: 0.90
+density: 5.51
+temperature: 220.00
+surfaceRoughness: 0.50
+terrainErosion: 0.20
+waterLevel: 0.30
+biomassLevel: 0.05
+plateTectonics: 0.40
+soilType: frozen
+soilTexture: crystalline
+atmosphereStrength: 0.60
+liquidType: water
+salinity: 0.10
+precipitationCompound: snow
+biome: Frigid Tundra
+mountainHeight: 0.70
+hasRings: false
+cloudCount: 30.00
+volcanicActivity: 0.05
+waterHeight: 0.30
+liquidEnabled: true
+customColors: {
+  "oceanFloor": "#A5F2F3",
+  "beach": "#E0FFFF",
+  "regular": "#F0F8FF",
+  "mountain": "#FFFFFF"
+}
+landmarks: [
+  {
+    "classification_id": "LM-701",
+    "type": "Glacier",
+    "visual_effect": "Aurora",
+    "image_link": "",
+    "coordinates": {
+      "x": 0.3,
+      "y": 0.7,
+      "z": 0.4
+    },
+    "influence_type": "glacier",
+    "influence_radius": 0.6,
+    "influence_strength": 0.8,
+    "influence_roughness": 0.3,
+    "category": "terrestrial"
+  },
+  {
+    "classification_id": "LM-702",
+    "type": "Ice Cave",
+    "visual_effect": "None",
+    "image_link": "",
+    "coordinates": {
+      "x": -0.5,
+      "y": 0.2,
+      "z": 0.6
+    },
+    "influence_type": "crater",
+    "influence_radius": 0.4,
+    "influence_strength": 0.5,
+    "influence_roughness": 0.2,
+    "category": "terrestrial"
+  }
+]
+type: Ice

@@ -1,0 +1,146 @@
+mass: 1.10
+radius: 1.05
+density: 5.75
+temperature: 288.00
+surfaceRoughness: 0.40
+terrainErosion: 0.10
+waterLevel: 0.20
+biomassLevel: 0.05
+plateTectonics: 0.50
+soilType: rocky
+soilTexture: layered
+atmosphereStrength: 0.85
+liquidType: water
+salinity: 0.30
+precipitationCompound: water
+biome: Urban
+mountainHeight: 0.50
+hasRings: false
+cloudCount: 40.00
+volcanicActivity: 0.05
+waterHeight: 0.20
+liquidEnabled: true
+customColors: {
+  "oceanFloor": "#1A1A1A",
+  "beach": "#2F4F4F",
+  "regular": "#696969",
+  "mountain": "#A9A9A9"
+}
+landmarks: [
+  {
+    "classification_id": "LM-C01",
+    "type": "Galactic City",
+    "visual_effect": "Light Emission",
+    "image_link": "",
+    "coordinates": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "influence_type": "mountain",
+    "influence_radius": 1.0,
+    "influence_strength": 0.8,
+    "influence_roughness": 0.7,
+    "category": "terrestrial",
+    "structures": [
+      {
+        "id": "STR-C01",
+        "type": "skyscraper",
+        "name": "Republic Executive Building",
+        "scale": { "x": 0.05, "y": 0.15, "z": 0.05 },
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "color": "#A0A0A0",
+        "metalness": 0.7,
+        "roughness": 0.3,
+        "emissive": "#FFFF99",
+        "emissiveIntensity": 0.4
+      },
+      {
+        "id": "STR-C02",
+        "type": "building",
+        "name": "Urban Sprawl",
+        "scale": { "x": 0.3, "y": 0.05, "z": 0.3 },
+        "position": { "x": 0, "y": -0.05, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "color": "#808080",
+        "metalness": 0.6,
+        "roughness": 0.4,
+        "emissive": "#FFFFFF",
+        "emissiveIntensity": 0.3
+      }
+    ]
+  },
+  {
+    "classification_id": "LM-C02",
+    "type": "Senate District",
+    "visual_effect": "None",
+    "image_link": "",
+    "coordinates": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    },
+    "influence_type": "mountain",
+    "influence_radius": 0.3,
+    "influence_strength": 0.9,
+    "influence_roughness": 0.5,
+    "category": "terrestrial",
+    "structures": [
+      {
+        "id": "STR-C03",
+        "type": "dome",
+        "name": "Senate Building",
+        "scale": { "x": 0.08, "y": 0.06, "z": 0.08 },
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "color": "#B0C4DE",
+        "metalness": 0.5,
+        "roughness": 0.3
+      },
+      {
+        "id": "STR-C04",
+        "type": "tower",
+        "name": "Jedi Temple",
+        "scale": { "x": 0.07, "y": 0.12, "z": 0.07 },
+        "position": { "x": 0.15, "y": 0, "z": 0.15 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "color": "#8B8878",
+        "metalness": 0.3,
+        "roughness": 0.6
+      }
+    ]
+  },
+  {
+    "classification_id": "LM-C03",
+    "type": "Industrial District",
+    "visual_effect": "Smoke",
+    "image_link": "",
+    "coordinates": {
+      "x": -0.6,
+      "y": -0.3,
+      "z": 0.4
+    },
+    "influence_type": "mountain",
+    "influence_radius": 0.4,
+    "influence_strength": 0.7,
+    "influence_roughness": 0.8,
+    "category": "terrestrial",
+    "structures": [
+      {
+        "id": "STR-C05",
+        "type": "industrial",
+        "name": "Factory Complex",
+        "scale": { "x": 0.1, "y": 0.04, "z": 0.1 },
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "color": "#4D4D4D",
+        "metalness": 0.8,
+        "roughness": 0.7,
+        "emissive": "#FF4500",
+        "emissiveIntensity": 0.2
+      }
+    ]
+  }
+]
+type: Urban

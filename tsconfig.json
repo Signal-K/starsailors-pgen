@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "strict": true,
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "target": "ES2017",
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/components/_[archive]/Classifications/Zoodex/CapturePage.jsx",
+    "app/components/_[archive]/Classifications/Zoodex/Mobx.jsx",
+    "components/topographic-map.jsx",
+    "components/enhanced-weather-events.jsx", "content/Comments/SurveyorForm.tsx.tst",
+  ],
+  "exclude": [
+    "node_modules",
+    "app/components/Data/Generator/Astronomer/DailyMinorPlanet.tsx"
+  ]
+}

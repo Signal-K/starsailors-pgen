@@ -1,0 +1,102 @@
+mass: 1.15
+radius: 1.08
+density: 5.65
+temperature: 295.00
+surfaceRoughness: 0.45
+terrainErosion: 0.35
+waterLevel: 0.55
+biomassLevel: 0.75
+plateTectonics: 0.65
+soilType: rocky
+soilTexture: smooth
+atmosphereStrength: 0.85
+liquidType: water
+salinity: 0.30
+precipitationCompound: water
+biome: Temperate Plains
+mountainHeight: 0.60
+hasRings: false
+cloudCount: 35.00
+volcanicActivity: 0.20
+waterHeight: 0.55
+liquidEnabled: true
+customColors: {
+  "oceanFloor": "#1A3A5A",
+  "beach": "#C2B280",
+  "regular": "#7D9F85",
+  "mountain": "#8A9A5B"
+}
+landmarks: [
+  {
+    "classification_id": "LM-N01",
+    "type": "Nubian Capital",
+    "visual_effect": "None",
+    "image_link": "",
+    "coordinates": {
+      "x": 0.4,
+      "y": 0.6,
+      "z": 0.3
+    },
+    "influence_type": "mountain",
+    "influence_radius": 0.3,
+    "influence_strength": 0.6,
+    "influence_roughness": 0.2,
+    "category": "terrestrial",
+    "structures": [
+      {
+        "id": "STR-N01",
+        "type": "building",
+        "name": "Royal Palace",
+        "scale": { "x": 0.05, "y": 0.08, "z": 0.05 },
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "color": "#E5D3B3",
+        "metalness": 0.4,
+        "roughness": 0.3
+      },
+      {
+        "id": "STR-N02",
+        "type": "spaceport",
+        "name": "Nubian Shipyards",
+        "scale": { "x": 0.1, "y": 0.03, "z": 0.1 },
+        "position": { "x": 0.1, "y": 0, "z": 0.1 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "color": "#C0C0C0",
+        "metalness": 0.8,
+        "roughness": 0.2
+      }
+    ]
+  },
+  {
+    "classification_id": "LM-N02",
+    "type": "Mining Region",
+    "visual_effect": "None",
+    "image_link": "",
+    "coordinates": {
+      "x": -0.5,
+      "y": 0.3,
+      "z": 0.4
+    },
+    "influence_type": "crater",
+    "influence_radius": 0.4,
+    "influence_strength": 0.7,
+    "influence_roughness": 0.6,
+    "category": "terrestrial",
+    "structures": [
+      {
+        "id": "STR-N03",
+        "type": "industrial",
+        "name": "Plasma Extraction Facility",
+        "scale": { "x": 0.06, "y": 0.04, "z": 0.06 },
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "color": "#708090",
+        "metalness": 0.7,
+        "roughness": 0.3,
+        "emissive": "#FF4500",
+        "emissiveIntensity": 0.3
+      }
+    ]
+  }
+]
+type: Terrestrial
