@@ -1,45 +1,24 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "ES6"],
     "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "target": "ES2017",
-    "skipLibCheck": true,
-    "esModuleInterop": true
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationDir": "dist",
+    "outDir": "dist"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/components/_[archive]/Classifications/Zoodex/CapturePage.jsx",
-    "app/components/_[archive]/Classifications/Zoodex/Mobx.jsx",
-    "components/topographic-map.jsx",
-    "components/enhanced-weather-events.jsx", "content/Comments/SurveyorForm.tsx.tst",
-  ],
-  "exclude": [
-    "node_modules",
-    "app/components/Data/Generator/Astronomer/DailyMinorPlanet.tsx"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "app", "components"]
 }

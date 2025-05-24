@@ -1,72 +1,72 @@
 {
   "name": "starsailors-planet-generator",
   "version": "1.0.5",
-  "scripts": {
-    "build": "vite build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "peerDependencies": {
-    "@react-three/fiber": "^8.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Signal-K/starsailors-pgen.git"
-  },
-  "keywords": [],
-  "main": "dist/planet-generator.umd.js",
-  "module": "dist/planet-generator.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/planet-generator.es.js",
-      "require": "./dist/planet-generator.umd.js"
-    }
-  },
-  "types": "dist/planet-generator.d.ts",
+  "description": "A React Three.js library for generating procedural planets with realistic terrain and atmospheric effects",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "README.md"
   ],
-  "author": "Liam Arbuckle | Star SAilors",
-  "license": "ISC",
-  "description": "",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepare": "npm run build",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "react",
+    "three.js",
+    "planet",
+    "procedural",
+    "3d",
+    "webgl",
+    "shader",
+    "terrain",
+    "space"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/planet-generator.git"
+  },
+  "peerDependencies": {
+    "@react-three/drei": ">=9.0.0",
+    "@react-three/fiber": ">=8.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "three": ">=0.150.0"
+  },
   "dependencies": {
-    "@radix-ui/react-accordion": "^1.2.10",
-    "@radix-ui/react-avatar": "^1.1.9",
-    "@radix-ui/react-dialog": "^1.1.13",
-    "@radix-ui/react-dropdown-menu": "^2.1.14",
+    "@radix-ui/react-checkbox": "^1.3.2",
     "@radix-ui/react-label": "^2.1.7",
-    "@radix-ui/react-popover": "^1.1.13",
-    "@radix-ui/react-progress": "^1.1.6",
-    "@radix-ui/react-radio-group": "^1.3.6",
-    "@radix-ui/react-scroll-area": "^1.2.8",
+    "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-select": "^2.2.5",
-    "@radix-ui/react-separator": "^1.1.6",
     "@radix-ui/react-slider": "^1.3.5",
-    "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-switch": "^1.2.5",
     "@radix-ui/react-tabs": "^1.1.12",
-    "@radix-ui/react-toast": "^1.2.13",
     "@react-three/drei": "^10.0.8",
     "@react-three/fiber": "^9.1.2",
-    "@supabase/auth-helpers-react": "^0.5.0",
-    "@vitejs/plugin-react": "^4.4.1",
     "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "d3": "^7.9.0",
-    "framer-motion": "^12.10.4",
-    "lucide-react": "^0.508.0",
+    "lucide-react": "^0.511.0",
     "react": "^19.1.0",
+    "react-colorful": "^5.6.1",
     "react-dom": "^19.1.0",
-    "tailwind-merge": "^3.2.0",
-    "three": "^0.176.0"
+    "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.17",
-    "@types/react": "^19.1.3",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5"
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/three": "^0.158.3",
+    "rollup": "^4.9.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^5.3.3"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

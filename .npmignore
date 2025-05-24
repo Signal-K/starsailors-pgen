@@ -1,0 +1,19 @@
+# Source files
+src/
+app/
+components/
+lib/
+
+# Development files
+rollup.config.js
+tsconfig.json
+.next/
+.vercel/
+
+# Dependencies
+node_modules/
+
+# Misc
+.DS_Store
+*.log
+.env*
