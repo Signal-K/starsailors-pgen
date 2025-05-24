@@ -1,4 +1,4 @@
-"use client"
+
 
 // Base layer noise function
 export function generateNoise(width: number, height: number, scale: number): number[][] {

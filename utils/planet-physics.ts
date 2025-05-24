@@ -1,4 +1,4 @@
-"use client"
+
 
 import { getSurfaceDeposits } from "./biome-data"
 import type { CloudCategory } from "./cloud-types"
